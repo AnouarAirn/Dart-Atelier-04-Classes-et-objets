@@ -26,6 +26,19 @@ class Film extends Media {
 
   @override
   void afficherType() {
-    print("Ceci est un Livre : $titre  ($dureeMinutes minutes).");
+    print("Ceci est un Film : $titre  ($dureeMinutes minutes).");
+  }
+}
+
+void main() {
+  List<Media> catalogue = [];
+
+  catalogue.add(Livre('Un rien peut tout changer', 'James Clear'));
+  catalogue.add(Livre('Le Pouvoir du moment présent', 'Eckhart Tolle'));
+  catalogue.add(Film('The Odyssey', 172));
+  catalogue.add(Film('Sinners', 137));
+
+  for (var m in catalogue) {
+    m.afficherType();
   }
 }
