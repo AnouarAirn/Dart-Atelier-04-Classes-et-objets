@@ -21,6 +21,16 @@ class Livre {
   }
 }
 
+class Roman extends Livre {
+  String genre;
+
+  Roman(super.titre, super.auteur, this.genre);
+
+  void afficherGenre() {
+    print('Genre: $genre');
+  }
+}
+
 void main() {
   var livre1 = Livre('The Psychology of Money', 'Morgan Housel');
   var livre2 = Livre('Unlock Your Power', 'Poppy Delbridge');
@@ -29,4 +39,16 @@ void main() {
   livre1.afficherInfos();
   livre2.afficherInfos();
   Livre.afficherTotal();
+
+  var roman1 = Roman('Agrippa', 'Robert Harris', 'historique');
+  var roman2 = Roman(
+    'La maison de vacances',
+    'Keri Beevis',
+    'Thriller psychologique',
+  );
+
+  roman1.afficherInfos();
+  roman1.afficherGenre();
+  roman2.afficherInfos();
+  roman2.afficherGenre();
 }
