@@ -8,4 +8,16 @@ class Compte {
     String montant = _solde.toStringAsFixed(2);
     return montant + '\$';
   }
+
+  void depot(double montant) {
+    if (montant > 0) {
+      _solde += montant;
+    }
+  }
+}
+
+void main() {
+  var compte = Compte('AN-485698');
+  compte.depot(150);
+  print(compte.solde);
 }
