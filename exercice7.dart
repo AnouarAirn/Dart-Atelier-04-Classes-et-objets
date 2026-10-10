@@ -6,3 +6,11 @@ class Tache {
     nombreTotal++;
   }
 }
+
+void main() {
+  Tache('Faire le Sport');
+  Tache('Etudier SQL');
+  Tache('Appeler un ami');
+
+  print('Nombre total de taches : ${Tache.nombreTotal}');
+}
